@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Kirill Cherepanov](https://up.htmlacademy.ru/adaptive/16/user/691731).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Пасунько](https://htmlacademy.ru/profile/id702351).
 
 ---
 
