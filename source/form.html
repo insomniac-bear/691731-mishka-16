@@ -38,63 +38,63 @@
       <p class="page-text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <form action="https://echo.htmlacademy.ru" class="ordering-form">
         <fieldset class="ordering-form__container">
-          <legend class="ordering-form__name">Тип</legend>
-          <label class="ordering-form__item-name">
-            <input type="radio" class="ordering-form__radio-button" name="type-of-ordering" checked> Аксессуар для интерьеров
+          <legend class="ordering-form__group-name">Тип</legend>
+          <label class="ordering-form__label">
+            <input type="radio" class="ordering-form__radio-button" name="type-of-ordering[]" value="Accssesory for interior" checked> Аксессуар для интерьеров
           </label>
-          <label class="ordering-form__item-name">
-            <input type="radio" class="ordering-form__radio-button" name="type-of-ordering"> Детская игрушка
+          <label class="ordering-form__label">
+            <input type="radio" class="ordering-form__radio-button" name="type-of-ordering[]" value="Toy"> Детская игрушка
           </label>
         </fieldset>
         <fieldset class="ordering-form__container">
-          <legend class="ordering-form__name">Цвет</legend>
-          <label class="ordering-form__item-name">
-            <input type="checkbox" class="ordering-form__checkbox" name="color-white" checked> Белый
+          <legend class="ordering-form__group-name">Цвет</legend>
+          <label class="ordering-form__label">
+            <input type="checkbox" class="ordering-form__checkbox" name="color[]" value="white" checked> Белый
           </label>
-          <label class="ordering-form__item-name">
-            <input type="checkbox" class="ordering-form__checkbox" name="color-gray" checked> Серый
+          <label class="ordering-form__label">
+            <input type="checkbox" class="ordering-form__checkbox" name="color[]" value="gray" checked> Серый
           </label>
-          <label class="ordering-form__item-name">
-            <input type="checkbox" class="ordering-form__checkbox" name="color-tiffany"> "Тиффани"
+          <label class="ordering-form__label">
+            <input type="checkbox" class="ordering-form__checkbox" name="color[]" value="tiffany"> "Тиффани"
           </label>
-          <label class="ordering-form__item-name">
-            <input type="checkbox" class="ordering-form__checkbox" name="color-black"> Черный
+          <label class="ordering-form__label">
+            <input type="checkbox" class="ordering-form__checkbox" name="color[]" value="black"> Черный
           </label>
-          <label fclass="ordering-form__item-name">
-            <input type="checkbox" class="ordering-form__checkbox" name="color-pink"> Розовый
+          <label fclass="ordering-form__label">
+            <input type="checkbox" class="ordering-form__checkbox" name="color[]" value="pink"> Розовый
           </label>
-          <label fclass="ordering-form__item-name">
-            <input type="checkbox" class="ordering-form__checkbox" name="color-orandge"> Оранжевый
+          <label fclass="ordering-form__label">
+            <input type="checkbox" class="ordering-form__checkbox" name="color[]" value="orandge"> Оранжевый
           </label>
         </fieldset>
         <fieldset class="ordering-form__container">
           <legend class="ordering-form__name">ФИО</legend>
-          <label class="ordering-form__item-name">
+          <label class="ordering-form__label">
             Имя:
-            <input type="text" class="ordering-form__input-box" name="name" placeholder="Введите ваше имя*">
+            <input type="text" class="ordering-form__input" name="name" placeholder="Введите ваше имя*">
           </label>
-          <label class="ordering-form__item-name">
+          <label class="ordering-form__label">
             Фамилия:
-            <input type="text" class="ordering-form__input-box" name="surname" placeholder="Укажите фамилию*">
+            <input type="text" class="ordering-form__input" name="surname" placeholder="Укажите фамилию*">
           </label>
-          <label class="ordering-form__item-name">
+          <label class="ordering-form__label">
             Отчество:
-            <input class="ordering-form__input-box" name="patronym" placeholder="Отчество, если желаете">
+            <input class="ordering-form__input" name="patronym" placeholder="Отчество, если желаете">
           </label>
         </fieldset>
         <fieldset class="ordering-form__container">
           <legend class="ordering-form__name">Тел</legend>
-          <input type="tel" class="ordering-form__input-box" name="phone-number" value="+7 XXX XXX XX XX*">
+          <input type="tel" class="ordering-form__input" name="phone-number" value="+7 XXX XXX XX XX*">
           <span class="ordering-form__icon"></span>
         </fieldset>
         <fieldset class="ordering-form__container">
           <legend class="ordering-form__name">E-mail</legend>
-          <input type="email" class="ordering-form__input-box" name="e-mail" value="Ваш Email*">
+          <input type="email" class="ordering-form__input" name="e-mail" value="Ваш Email*">
           <span class="ordering-form__icon"></span>
         </fieldset>
         <fieldset class="ordering-form__container">
           <legend class="ordering-form__name">Доп</legend>
-          <textarea name=" wishes" rows="6" cols="25" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          <textarea class="ordering-form__textarea" name="wishes" rows="6" cols="25" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
         <p class="ordering-form__note"><sup>*</sup>Поля обязательны для заполнения</p>
         <button type="submit" class="button">Отправить заказ</button>
