@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo">
-        <img src="#" class="page-header__logo-image" width="86" height="35" alt="Логотип магазина">
+        <img src="img/logo-mobile.svg" class="page-header__logo-image" width="86" height="35" alt="Логотип магазина">
       </a>
       <nav class="site-navigation">
         <button class="site-navigation__toggle">Открыть меню</button>
-        <ul class="site-navigation__list site-list">
+        <ul class="site-list site-navigation__list">
           <li class="site-navigation__item">
             <a href="catalog.html" class="site-navigation__link">Каталог товаров</a>
           </li>
@@ -19,12 +20,12 @@
             <a href="#" class="site-navigation__link">Вязание на заказ</a>
           </li>
         </ul>
-        <ul class="site-navigation__list user-list">
-          <li class="user-list__item">
-            <a href="#" class="user-list__searching">Поиск по сайту</a>
+        <ul class="site-list site-navigation__list user-list">
+          <li class="site-navigation__item user-list__item">
+            <a href="#" class="site-navigation__link user-list__searching">Поиск по сайту</a>
           </li>
-          <li class="user-list__item">
-            <a href="#" class="user-list__cart">
+          <li class="site-navigation__item user-list__item">
+            <a href="#" class="site-navigation__link user-list__cart">
               Корзина:
               <span>пока пуста</span>
             </a>
@@ -35,12 +36,12 @@
 
     <main class="page-main">
       <h1 class="visually-hidden">Магазин вязанных вещей ручной работы</h1>
-      <h2 class="page-title">Милые штучки ручной работы для дома</h2>
+      <h2 class="site-title site-title--page-main">Милые штучки ручной работы для дома</h2>
 
       <nav class="catalog-navigation">
-        <ul class="catalog-navigation__list">
-          <li class="catalog-navigation__item"><a href="#">Предметы интерьера</a></li>
-          <li class="catalog-navigation__item"><a href="#">Детские Игрушки</a></li>
+        <ul class="site-list catalog-navigation__list">
+          <li class="catalog-navigation__item"><a href="#" class="catalog-navigation__link">Предметы интерьера</a></li>
+          <li class="catalog-navigation__item catalog-navigation__item--dark"><a href="#" class="catalog-navigation__link">Детские Игрушки</a></li>
         </ul>
       </nav>
 
@@ -64,18 +65,18 @@
           <dt class="popular-product__attribute-name">Высота:</dt>
           <dd class="popular-product__attribute-value">15 см</dd>
         </dl>
-        <figure>
-          <img src="http://placehold.it/150x100" class="popular-product-image" width="150" height="100"alt="Изображение товара">
-          <figcaption>
+        <figure class="popular-product__image-container">
+          <img src="img/triple-set-mobile@1x.jpg" class="popular-product-image" width="260" height="315"alt="Изображение товара">
+          <figcaption class="popular-product__image-caption">
             <p class="popular-product__price">Цена: 990 руб.</p>
           </figcaption>
         </figure>
         <button class="button">Заказать</button>
       </section>
 
-      <section class="about_us">
+      <section class="about-us">
         <h2 class="page-title">Коротко о нас:</h2>
-        <ul class="about-us__list">
+        <ul class="site-list about-us__list">
           <li class="about-us__item">
             <span class="about-us__icon"></span>
             <p class="about-us__paragraph">Экологически чистые материалы</p>
@@ -112,32 +113,41 @@
             <span class="feedback__contact">@misssssiskras</span>
           </cite>
         </blockquote>
-        <button class="feedback__button feedback__button--left">Предыдущий отзыв</button>
-        <button class="feedback__button feedback__button--right">Следующий отзыв</button>
+        <button class="feedback__button feedback__button--left">
+          <span class="visually-hidden">Предыдущий отзыв</span>
+        </button>
+        <button class="feedback__button feedback__button--right">
+          <span class="visually-hidden">Следующий отзыв</span>
+        </button>
         <button class="button">Написать</button>
       </section>
 
       <section class="contacts">
+        <h2 class="contacts__title">Контакты</h2>
         <dl class="contacts__container">
           <dt class="contacts__text">e-mail:</dt>
           <dd class="contacts__email"><a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></dd>
           <dt class="contacts__text">Адрес:</dt>
           <dd class="contacts__address">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</dd>
         </dl>
-        <div class="contacts__map"><!--Контейнер под карту--></div>
+        <div class="contacts__map">
+          <img src="img/map-mobile@1x.jpg" alt="Изображение карты с адресом" class="contacts__map-img" width="322" height="457">
+          <!--Контейнер под метку на карте-->
+          <span class="contacts__map-mark"></span>
+        </div>
         <button class="button">Напишите нам</button>
       </section>
     </main>
 
     <footer class="page-footer">
-      <ul class="page-footer__list social-list">
+      <ul class="site-list page-footer__list social-list">
         <li class="social-item"><a href="#" class="social-link">Instagram</a></li>
         <li class="social-item"><a href="#" class="social-link">Fcebook</a></li>
         <li class="social-item"><a href="#" class="social-link">Twitter</a></li>
       </ul>
       <dl class="page-footer__creator-container">
         <dt class="page-footer__creator-text">Разработано</dt>
-        <dd class="page-footer__creator-author"><img src="#" width="27" height="34" alt="HTML Academy"></dd>
+        <dd class="page-footer__creator-author"><img src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Academy"></dd>
       </dl>
     </footer>
   </body>

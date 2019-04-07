@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка, каталог товаров</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <header class="page-header">
       <a href="index.html" class="page-header__logo">
-        <img src="index.html" class="page-header__logo-image" width="86" height="35" alt="Логотип магазина">
+        <img src="img/logo-mobile.svg" class="page-header__logo-image" width="86" height="35" alt="Логотип магазина">
       </a>
       <nav class="site-navigation">
         <button class="site-navigation__toggle">Открыть меню</button>
@@ -19,12 +20,12 @@
             <a href="#" class="site-navigation__link">Вязание на заказ</a>
           </li>
         </ul>
-        <ul class="site-navigation__list user-list">
-          <li class="user-list__item">
-            <a href="#" class="user-list__searching">Поиск по сайту</a>
+        <ul class="site-list site-navigation__list user-list">
+          <li class="site-navigation__item user-list__item">
+            <a href="#" class="site-navigation__link user-list__searching">Поиск по сайту</a>
           </li>
-          <li class="user-list__item">
-            <a href="#" class="user-list__cart">
+          <li class="site-navigation__item user-list__item">
+            <a href="#" class="site-navigation__link user-list__cart">
               Корзина:
               <span>пока пуста</span>
             </a>
@@ -33,25 +34,18 @@
       </nav>
     </header>
 
-    <main class="catalog-page">
-      <h1 class="page-title">Каталог товаров</h1>
+    <main class="page-catalog">
+      <h1 class="site-title">Каталог товаров</h1>
 
       <section class="catalog">
-        <ul class="catalog__list">
+        <ul class="site-list catalog__list">
           <li class="catalog__item">
             <a href="#" class="catalog__link">
               <figure class="card-product">
-                <img src="http://placehold.it/150x100" class="card-product__image" width="260" height="195" alt="Изображение товара">
+                <img src="img/photo-hare-mobile@1x.jpg" class="card-product__image" width="260" height="195" alt="Изображение товара">
                 <figcaption class="card-product__description">
-                  <h3 class="catalog-page__title">Зайчик-попрыгайчик</h3>
-                    <dl class="card-product__attribute">
-                      <dt class="card-product__attribute-name">Рост</dt>
-                      <dd class="card-product__attribute-value">30 см,</dd>
-                    </dl>
-                    <dl class="card-product__attribute">
-                      <dt class="card-product__attribute-name">Вес</dt>
-                      <dd class="card-product__attribute-value">200 г</dd>
-                    </dl>
+                  <h3 class="page-catalog__title">Зайчик-попрыгайчик</h3>
+                  <p class="card-product__attribute">Рост 30 см, вес 200 г</p>
                   <p class="card-product__price">1 200 руб.</p>
                   <span class="card-product__cart-icon"></span>
                 </figcaption>
@@ -61,17 +55,10 @@
           <li class="catalog__item">
             <a href="#" class="catalog__link">
               <figure class="card-product">
-                <img src="http://placehold.it/150x100" class="card-product__image" width="260" height="195" alt="Изображение товара">
+                <img src="img/photo-bowl-mobile@1x.jpg" class="card-product__image" width="260" height="195" alt="Изображение товара">
                 <figcaption class="card-product__description">
-                  <h3 class="catalog-page__title">Корзинка для белья</h3>
-                  <dl class="card-product__attribute">
-                    <dt class="card-product__attribute-name">Диаметр</dt>
-                    <dd class="card-product__attribute-value">15 см,</dd>
-                  </dl>
-                  <dl class="card-product__attribute">
-                    <dt class="card-product__attribute-name">Высота</dt>
-                    <dd class="card-product__attribute-value">10 см</dd>
-                  </dl>
+                  <h3 class="page-catalog__title">Корзинка для белья</h3>
+                  <p class="card-product__attribute">Диаметр 15 см, высота 10 см</p>
                   <p class="card-product__price">690 руб.</p>
                   <span class="card-product__cart-icon"></span>
                 </figcaption>
@@ -81,17 +68,10 @@
           <li class="catalog__item">
             <a href="#" class="catalog__link">
               <figure class="card-product">
-                <img src="http://placehold.it/150x100" class="card-product__image" width="260" height="195" alt="Изображение товара">
+                <img src="img/photo-toys-mobile@1x.jpg" class="card-product__image" width="260" height="195" alt="Изображение товара">
                 <figcaption class="card-product__description">
-                  <h3 class="catalog-page__title">Большая корзина для игрушек</h3>
-                  <dl class="card-product__attribute">
-                    <dt class="card-product__attribute-name">Диаметр</dt>
-                    <dd class="card-product__attribute-value">30 см,</dd>
-                  </dl>
-                  <dl class="card-product__attribute">
-                    <dt class="card-product__attribute-name">Высота</dt>
-                    <dd class="card-product__attribute-value">30 см</dd>
-                  </dl>
+                  <h3 class="page-catalog__title">Большая корзинка для игрушек</h3>
+                  <p class="card-product__attribute">Диаметр 30 см, высота 30 см</p>
                   <p class="card-product__price">1 500 руб.</p>
                   <span class="card-product__cart-icon"></span>
                 </figcaption>
@@ -101,25 +81,30 @@
         </ul>
       </section>
       <section class="about-production">
-        <span class="about-production__icon"></span>
-        <h3 class="catalog-page__title">Процесс производства</h3>
-        <video class="about-production__video" poster="posterimage.jpg" width="260" height="150">
-          <source src="https://" type="video/">
-        </video>
-        <p class="about-production__description">По просьбам наших любимых фоловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <button class="button">Сделать заказ</button>
+        <header class="about-production__header">
+          <span class="about-production__icon"></span>
+          <h3 class="page-catalog__title">Процесс производства</h3>
+        </header>
+        <a class="about-production__video" href="#">
+          <img src="img/video-mobile@1x.jpg"  class="about-production__video-img" width="260" height="150">
+          <span class="about-production__video-icon"></span>
+        </a>
+        <div class="about-production__wrapper">
+          <p class="about-production__description">По просьбам наших любимых фоловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <button class="button">Сделать заказ</button>
+        </div>
       </section>
     </main>
 
     <footer class="page-footer">
-      <ul class="page-footer__list social-list">
+      <ul class="site-list page-footer__list social-list">
         <li class="social-item"><a href="#" class="social-link">Instagram</a></li>
         <li class="social-item"><a href="#" class="social-link">Fcebook</a></li>
         <li class="social-item"><a href="#" class="social-link">Twitter</a></li>
       </ul>
       <dl class="page-footer__creator-container">
         <dt class="page-footer__creator-text">Разработано</dt>
-        <dd class="page-footer__creator-author"><img src="#" width="27" height="34" alt="HTML Academy"></dd>
+        <dd class="page-footer__creator-author"><img src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Academy"></dd>
       </dl>
     </footer>
   </body>
