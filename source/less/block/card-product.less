@@ -6,6 +6,9 @@
 .card-product__image {
   margin: 0;
   padding: 0;
+
+  width: 100%;
+  height: auto;
 }
 
 .card-product__description {
@@ -16,6 +19,7 @@
   padding-right: 27px;
 
   border: 1px solid #ededed;
+  border-spacing: 0;
 }
 
 .card-product__title {
@@ -49,4 +53,20 @@
   font-size: 15px;
   font-weight: bold;
   line-height: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .card-product {
+    display: flex;
+  }
+
+  .card-product__image {
+    width: 50%;
+    height: auto;
+  }
+
+  .card-product__description {
+    width: 50%;
+    height: auto;
+  }
 }
