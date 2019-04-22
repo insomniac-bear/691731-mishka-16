@@ -18,20 +18,44 @@
   margin: 0 10%;
   padding: 0;
   padding-bottom: 25px;
+
+  &::before {
+    content: "";
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    width: 33px;
+    height: 33px;
+
+    background-image: url("../img/icon-video.svg");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100%;
+  }
 }
 
-.about-production__icon {
-  display: block;
-  margin: 0;
-  padding: 0;
+.about-production__video {
+  position: relative;
 
-  width: 33px;
-  height: 33px;
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    margin: 0;
+    padding: 0;
 
-  background-image: url("../img/icon-video.svg");
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: 100%;
+    top: calc(50% - 38px - 33px);
+    left: calc(50% - 50px);
+
+    width: 101px;
+    height: 77px;
+
+    background-image: url("../img/icon-play.svg");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100%;
+  }
 }
 
 .about-production__video-img {
@@ -53,11 +77,77 @@
 }
 
 @media (min-width: @tablet-width) {
-  .about-production {
-    padding-top: 0;
+  .about-production__header {
+    margin: 0 6%;
   }
 
   .about-production__video {
     order: -1;
+
+    width: 100%;
+  }
+
+  .about-production__description {
+    margin: 0 6%;
+    margin-bottom: 40px;
+
+    font-size: 15px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-production {
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: stretch;
+    margin: 0 4.3%;
+    margin-bottom: 105px;
+    padding-top: 0;
+  }
+
+  .about-production__header {
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+
+    top: 46px;
+    right: 139px;
+
+    width: 150px;
+
+    &::before {
+      margin-bottom: 29px;
+    }
+  }
+
+  .about-production__video {
+    order: -1;
+    margin: 0;
+    padding: 0;
+
+    width: 65%;
+
+    &::after {
+      top: calc(50% - 38px);
+    }
+  }
+
+  .about-production__video-img {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: auto;
+  }
+
+  .about-production__description {
+    margin: 0;
+    margin-bottom: 51px;
+    margin-left: 79px;
+    padding: 0;
   }
 }

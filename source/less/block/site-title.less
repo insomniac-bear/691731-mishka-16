@@ -16,10 +16,31 @@
 
 @media (min-width: @tablet-width) {
   .site-title {
-    padding-top: 119px;
+    padding-top: 100px;
     padding-bottom: 66px;
 
     font-size: 43px;
     line-height: 50px;
+
+    &--page-main {
+      padding-top: 157px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-title {
+    padding-top: 96px;
+    padding-bottom: 80px;
+
+    font-size: 53px;
+    line-height: 57px;
+
+    &--page-main {
+      margin: 0;
+      padding-top: 157px;
+      padding-right: 225px;
+      padding-left: 225px;
+    }
   }
 }

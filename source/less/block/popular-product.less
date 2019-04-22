@@ -100,6 +100,7 @@
   .popular-product__header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0 7%;
   }
 
@@ -113,7 +114,7 @@
     display: inline-block;
     margin-top: 7px;
     margin-bottom: 55px;
-    width: 16%;
+    width: 70px;
 
     text-align: center;
     line-height: 17px;
@@ -135,5 +136,58 @@
 
   .popular-product__price {
     margin-top: -88px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .popular-product {
+    position: relative;
+
+    margin: 0 4.3%;
+    margin-top: 74px;
+    padding-bottom: 73px;
+
+    border-bottom: 23px solid #f1f1f1;
+  }
+
+  .popular-product__header {
+    position: absolute;
+    justify-content: flex-start;
+    top: 56px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .popular-product__title {
+    margin: 0;
+    padding: 0;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .popular-product__status {
+    order: -1;
+    margin: 0;
+    padding-right: 58px;
+    padding-left: 47px;
+
+    width: 70px;
+  }
+
+  .popular-product__feature {
+    margin-bottom: 65px;
+    padding-top: 165px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .popular-product__price {
+    margin-top: -109px;
+    margin-bottom: 33px;
+
+    font-size: 20px;
+    line-height: 24px;
   }
 }

@@ -30,7 +30,7 @@
 .page-header__nav-toggle {
   position: absolute;
   top: 32px;
-  right: 31px;
+  right: 9%;
   display: block;
 
   margin: 0;
@@ -112,25 +112,14 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
+    position: relative;
     flex-direction: row;
-    justify-content: flex-start;
     flex-wrap: wrap;
-
-    padding: 0;
-    background: transparent;
-    border: none;
+    justify-content: space-between;
   }
 
   .page-header__logo {
-    margin-left: 6%;
-    width: 42%;
-  }
-
-  .page-header__logo-image {
-    margin: 0;
-    margin-top: 22px;
-    margin-bottom: 20px;
-    padding: 0;
+    margin-left: 6.5%;
   }
 
   .page-header__nav-toggle {
@@ -138,8 +127,20 @@
   }
 
   .page-header__nav-txt {
+    position: absolute;
+    bottom: -45px;
+    right: 6.5%;
     display: block;
-    margin-top: 22px;
-    margin-right: 7%;
+    order: 4;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__logo {
+    margin-left: 0;
+  }
+
+  .page-header__nav-txt {
+    right: 4.3%;
   }
 }

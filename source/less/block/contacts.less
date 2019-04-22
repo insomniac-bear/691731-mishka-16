@@ -4,6 +4,11 @@
   padding-bottom: 39px;
 }
 
+.contacts__header {
+  margin: 0 9%;
+  padding: 0;
+}
+
 .contacts__mobile-none {
   display: none;
 }
@@ -57,22 +62,73 @@
 }
 
 .contacts__map {
+  position: relative;
   margin: 0;
   margin-bottom: 39px;
   padding: 0;
 
   width: 100%;
   height: auto;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    display: block;
+
+    width: 67px;
+    height: 100px;
+
+    top: calc(50% - 100px);
+    left: calc(50% - 67px / 4);
+
+    background-image: url("../img/icon-map-pin.svg");
+  }
 }
 
 .contacts__map-img {
   width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 @media (min-width: @tablet-width) {
+  .contacts__header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 6%;
+    margin-top: 66px;
+    margin-bottom: 52px;
+
+    width: 88%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -19px;
+      right: 0;
+      display: block;
+      margin: 0;
+      margin-bottom: 39px;
+      padding: 0;
+
+      width: 47px;
+      height: 81px;
+
+      background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
   .contacts__title {
-    margin-top: 18px;
+    margin: 0;
+    padding: 0;
+
+    font-size: 43px;
+    line-height: 50px;
   }
 
   .contacts__mobile-none {
@@ -95,6 +151,68 @@
   }
 
   .contacts__container {
+    width: 50%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0 4.3%;
+  }
+
+  .contacts__header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0;
+    margin-top: 62px;
+    margin-left: 63px;
+    padding: 0;
+
+    width: 373px;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      margin: 0;
+      margin-right: 64px;
+      padding: 0;
+
+      width: 47px;
+      height: 81px;
+
+      background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
+  .contacts__title {
+    margin: 0;
+    padding: 0;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .contacts__container {
+    width: 300px;
+  }
+
+  .contacts__map {
+    margin: 0;
+    padding: 0;
+
     width: 50%;
   }
 }

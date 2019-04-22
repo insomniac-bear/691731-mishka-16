@@ -5,7 +5,6 @@
   padding-bottom: 14px;
 
   width: 100%;
-  min-width: 260px;
 
   font-size: 17px;
   font-weight: bold;
@@ -15,14 +14,18 @@
   background-color: #ffffff;
   border: #444444 solid 2px;
 
-  &--w30p {
-    margin: 0 auto;
-    width: 30%;
-  }
-
   &--catalog {
     margin: 0 10%;
     width: 80%;
     min-width: 194px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    &--catalog {
+      margin: 0 6%;
+      width: 88%;
+    }
   }
 }
