@@ -1,0 +1,46 @@
+.site-title {
+  margin: 0 9%;
+  padding: 0;
+  padding-top: 71px;
+  padding-bottom: 75px;
+
+  font-size: 27px;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+
+  &--page-main {
+    padding-bottom: 120px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .site-title {
+    padding-top: 100px;
+    padding-bottom: 66px;
+
+    font-size: 43px;
+    line-height: 50px;
+
+    &--page-main {
+      padding-top: 157px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-title {
+    padding-top: 96px;
+    padding-bottom: 80px;
+
+    font-size: 53px;
+    line-height: 57px;
+
+    &--page-main {
+      margin: 0;
+      padding-top: 157px;
+      padding-right: 225px;
+      padding-left: 225px;
+    }
+  }
+}

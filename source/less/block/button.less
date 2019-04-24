@@ -4,6 +4,8 @@
   padding-top: 16px;
   padding-bottom: 14px;
 
+  width: 100%;
+
   font-size: 17px;
   font-weight: bold;
   line-height: 20px;
@@ -11,4 +13,19 @@
 
   background-color: #ffffff;
   border: #444444 solid 2px;
+
+  &--catalog {
+    margin: 0 10%;
+    width: 80%;
+    min-width: 194px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    &--catalog {
+      margin: 0 6%;
+      width: 88%;
+    }
+  }
 }
