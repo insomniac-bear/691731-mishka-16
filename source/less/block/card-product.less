@@ -13,7 +13,9 @@
 }
 
 .card-product__description {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   padding-top: 28px;
@@ -25,7 +27,6 @@
 }
 
 .card-product__cart-icon {
-  position: absolute;
   display: block;
 
   bottom: 31px;
@@ -78,8 +79,6 @@
   font-size: 13px;
   line-height: 30px;
   color: #444444;
-
-  border-bottom: 1px solid #ededed;
 }
 
 .card-product__price {
@@ -98,13 +97,12 @@
   }
 
   .card-product__image {
-    width: 50%;
+    width: 100%;
     height: auto;
   }
 
   .card-product__description {
     width: calc(50% - 27px * 2);
-    height: auto;
   }
 
   .card-product__title {
