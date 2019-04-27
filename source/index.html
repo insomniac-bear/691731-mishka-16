@@ -102,7 +102,13 @@
               <dd class="popular-product__attribute-value">15 см</dd>
             </dl>
           </div>
-          <img src="img/triple-set-mobile@1x.jpg" class="popular-product__image" width="260" height="315" alt="Изображение товара">
+
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg">
+            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg">
+            <img src="img/triple-set-mobile@1x.jpg" class="popular-product__image" alt="Изображение товара">
+          </picture>
+
           <div class="wrapper__inner wrapper__inner--popular wrapper__inner--popular-button ">
             <p class="popular-product__price">Цена: 990 руб.</p>
             <button class="button">Заказать</button>
@@ -225,9 +231,13 @@
           </dl>
         </div>
         <div class="contacts__map">
-          <img src="img/map-mobile@1x.jpg" class="contacts__map-img" width="322" height="457" alt="Изображение карты с адресом">
-            <!--Контейнер под метку на карте-->
-          <span class="contacts__map-mark"></span>
+
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg">
+            <source media="(min-width: 765px)" srcset="img/map-tablet@1x.jpg">
+            <img src="img/map-mobile@1x.jpg" class="contacts__map-img" alt="Изображение карты с адресом">
+          </picture>
+
         </div>
         <div class="wrapper__inner wrapper__inner--contacts">
           <button class="button button--w30p">Напишите нам</button>
