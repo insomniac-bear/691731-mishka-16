@@ -19,13 +19,26 @@
     width: 80%;
     min-width: 194px;
   }
+
+  &:hover {
+    color: #ffffff;
+    background-color: #444444;
+  }
+
+  &:active {
+    color: #8d8d8d;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .button {
     &--catalog {
       margin: 0 6%;
-      width: 88%;
+      width: calc(88% - 4px);
+    }
+
+    &--form {
+      width: 226px;
     }
   }
 }
