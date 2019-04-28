@@ -4,10 +4,7 @@
   margin: 0 9%;
   margin-bottom: 58px;
   padding: 0;
-  padding-top: 26px;
   padding-bottom: 32px;
-
-  border: 1px solid #ededed;
 }
 
 .about-production__header {
@@ -15,9 +12,10 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
-  margin: 0 10%;
-  padding: 0;
-  padding-bottom: 25px;
+  margin: 0;
+  padding: 25px 10%;
+
+  border: 1px solid #ededed;
 
   &::before {
     content: "";
@@ -37,30 +35,38 @@
 
 .about-production__video {
   position: relative;
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    display: block;
-    margin: 0;
-    padding: 0;
+.about-production__video-icon {
+  position: absolute;
+  display: block;
+  margin: 0;
+  padding: 0;
 
-    top: calc(50% - 38px - 33px);
-    left: calc(50% - 50px);
+  top: calc(50% - 38px);
+  left: calc(50% - 50px);
 
-    width: 101px;
-    height: 77px;
+  width: 101px;
+  height: 77px;
 
-    background-image: url("../img/icon-play.svg");
-    background-repeat: no-repeat;
-    background-position: top left;
-    background-size: 100%;
+  background-image: url("../img/icon-play.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100%;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(0.8);
+    opacity: 0.3;
   }
 }
 
 .about-production__video-img {
+  display: block;
   margin: 0;
-  margin-bottom: 33px;
   padding: 0;
 
   width: 100%;
@@ -68,7 +74,7 @@
 }
 
 .about-production__description {
-  margin: 0 10%;
+  margin: 0 9%;
   margin-bottom: 29px;
   padding: 0;
 
@@ -78,7 +84,13 @@
 
 @media (min-width: @tablet-width) {
   .about-production__header {
-    margin: 0 6%;
+    margin: 0;
+    padding-top: 40px;
+    padding-right: 0;
+    padding-bottom: 40px;
+    padding-left: 40px;
+
+    border-bottom: none;
   }
 
   .about-production__video {
@@ -91,6 +103,7 @@
     margin: 0 6%;
     margin-bottom: 40px;
 
+    width: 87%;
     font-size: 15px;
     line-height: 30px;
   }
@@ -119,6 +132,8 @@
 
     width: 150px;
 
+    border: none;
+
     &::before {
       margin-bottom: 29px;
     }
@@ -129,7 +144,8 @@
     margin: 0;
     padding: 0;
 
-    width: 65%;
+    width: 684px;
+    height: auto;
 
     &::after {
       top: calc(50% - 38px);
@@ -147,7 +163,10 @@
   .about-production__description {
     margin: 0;
     margin-bottom: 51px;
+    margin-right: 67px;
     margin-left: 79px;
     padding: 0;
+
+    width: 223px;
   }
 }

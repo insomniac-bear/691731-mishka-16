@@ -14,8 +14,42 @@
 
   width: 100%;
 
+  &--about-production {
+    padding: 32px 0;
+
+    border: 1px solid #ededed;
+
+    &:hover {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+
   &--feedback {
     flex-direction: row;
+  }
+
+  &--product-description {
+    margin: 0;
+    padding: 0;
+  }
+
+  &--product-price {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+
+    border-top: 1px solid #ededed;
+  }
+
+  &--contacts {
+    margin: 0 9%;
+
+    width: 81%;
+  }
+
+  &--form {
+    margin-top: 32px;
+    margin-bottom: 41px;
   }
 }
 
@@ -51,6 +85,12 @@
       justify-content: space-between;
     }
 
+    &--textarea {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 50px;
+    }
+
     &--footer {
       justify-content: space-between;
     }
@@ -76,10 +116,48 @@
       width: 25%;
     }
 
+    &--contacts {
+      margin: 0 auto;
+
+      width: 230px;
+    }
+
     &--about-production {
       flex-direction: column;
       margin: 0;
       padding: 0;
+      padding-bottom: 45px;
+      border-top: none;
+
+      width: calc(100% - 2px);
+    }
+
+    &--form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 50px;
+      margin-bottom: 0;
+      margin-left: 25%;
+      padding-bottom: 50px;
+
+      width: 75%;
+    }
+
+    &--ordering-gray {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      padding-bottom: 26px;
+    }
+
+    &--textarea-footer {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+
+      width: 100%;
     }
   }
 }
@@ -110,6 +188,18 @@
       padding-left: 16.6%;
 
       width: 33.4%;
+    }
+
+    &--form-text {
+      margin: 0 4.3%;
+    }
+
+    &--textarea {
+      margin: 0;
+    }
+
+    &--footer {
+      margin: 0 4.3%;
     }
   }
 
@@ -145,7 +235,24 @@
       padding: 0;
       padding-top: 185px;
 
-      width: 35%;
+      width: 366px;
+
+      border-top: 1px solid #ececec;
+    }
+
+    &--form {
+      margin-left: 17%;
+
+      width: 83%;
+    }
+
+    &--textarea-footer {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      padding: 0;
+      width: 60.8%;
     }
   }
 }

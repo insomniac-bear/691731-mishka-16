@@ -13,6 +13,10 @@
 .catalog__link {
   margin: 0;
   padding: 0;
+
+  &:hover .card-product__description {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -31,8 +35,14 @@
   }
 
   .catalog__item {
+    display: flex;
     margin: 0;
     margin-bottom: 57px;
     padding: 0;
+  }
+
+  .catalog__link {
+    display: flex;
+    height: auto;
   }
 }
