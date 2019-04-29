@@ -111,7 +111,7 @@
 
           <div class="wrapper__inner wrapper__inner--popular wrapper__inner--popular-button ">
             <p class="popular-product__price">Цена: 990 руб.</p>
-            <button class="button">Заказать</button>
+            <button class="button button__order">Заказать</button>
           </div>
         </div>
       </section>
@@ -304,6 +304,35 @@
         </dl>
       </div>
     </footer>
+
+    <div class="pop-up pop-up__nojs">
+      <div class="pop-up__box">
+        <h2 class="pop-up__title">Добавть в&nbsp;корзину</h2>
+        <p class="pop-up__note">Выберите размер:</p>
+        <form action="https://echo.htmlacademy.ru" class="pop-up__form" method="get">
+          <ul class="site-list pop-up__list">
+            <li class="pop-up__list-item">
+              <label class="pop-up__label">
+                <input type="radio" class="visually-hidden pop-up__checkbox" name="size[]" value="S" checked tabindex="-1">
+                <span class="pop-up__checkbox-btn" tabindex="1">S</span>
+              </label>
+            </li>
+            <li class="pop-up__list-item">
+              <label class="pop-up__label">
+                <input type="radio" class="visually-hidden pop-up__checkbox" name="size[]" value="M" tabindex="-1">
+                <span class="pop-up__checkbox-btn" tabindex="2">M</span>
+              </label>
+            <li class="pop-up__list-item">
+              <label class="pop-up__label">
+                <input type="radio" class="visually-hidden pop-up__checkbox" name="size[]" value="L" tabindex="-1">
+                <span class="pop-up__checkbox-btn" tabindex="3">L</span>
+              </label>
+            </li>
+          </ul>
+          <button type="submit" class="button button__pop-up" tabindex="4">Добавить</button>
+        </form>
+      </div>
+    </div>
 
     <script src="js/script.js"></script>
   </body>
