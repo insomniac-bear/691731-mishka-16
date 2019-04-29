@@ -1,6 +1,7 @@
 var navMain = document.querySelector('.page-header');
 var navToggle = document.querySelector('.page-header__nav-toggle');
 var popUp = document.querySelector('.pop-up');
+var popUpBox = popUp.querySelector('.pop-up__box');
 var btnOrder = document.querySelector('.button__order');
 
 var form = document.querySelector('ordering-form');
@@ -37,8 +38,10 @@ document.addEventListener("click", function (e) {
 
     if (popUp) {
       if (popUp.classList.contains('pop-up__open')) {
-        if (target == popUp) {
+        if (target.classList.contains('pop-up')) {
           popUp.classList.remove('pop-up__open');
+          console.log(target);
+          return;
         };
       };
     };
@@ -60,6 +63,7 @@ document.addEventListener("click", function (e) {
         e.preventDefault();
         inputEmail.classList.add("ordering-form__error");
       };
+      return;
     };
 
     target = target.parentNode;
