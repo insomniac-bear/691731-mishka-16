@@ -1,7 +1,6 @@
 var navMain = document.querySelector('.page-header');
 var navToggle = document.querySelector('.page-header__nav-toggle');
 var popUp = document.querySelector('.pop-up');
-var popUpBox = popUp.querySelector('.pop-up__box');
 var btnOrder = document.querySelector('.button__order');
 
 var form = document.querySelector('ordering-form');
@@ -13,6 +12,7 @@ var buttonForm = document.querySelector('.button--form');
 
 navMain.classList.remove('page-header__nav--nojs');
 if (popUp) {
+  var popUpBox = popUp.querySelector('.pop-up__box');
   popUp.classList.remove('pop-up__nojs');
 }
 
@@ -38,11 +38,10 @@ document.addEventListener("click", function (e) {
 
     if (popUp) {
       if (popUp.classList.contains('pop-up__open')) {
-        if (target.classList.contains('pop-up')) {
+        if (target == popUp) {
           popUp.classList.remove('pop-up__open');
-          console.log(target);
-          return;
         };
+        return;
       };
     };
 
@@ -68,4 +67,16 @@ document.addEventListener("click", function (e) {
 
     target = target.parentNode;
   };
+});
+
+window.addEventListener('keydown', function(e) {
+  if (e.keyCode === 27) {
+    e.preventDefault();
+    console.log(e);
+    if (popUp) {
+      if (popUp.classList.contains('pop-up__open')) {
+        popUp.classList.remove('pop-up__open');
+      };
+    };
+  }
 });
