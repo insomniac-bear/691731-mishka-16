@@ -72,7 +72,6 @@ document.addEventListener("click", function (e) {
 window.addEventListener('keydown', function(e) {
   if (e.keyCode === 27) {
     e.preventDefault();
-    console.log(e);
     if (popUp) {
       if (popUp.classList.contains('pop-up__open')) {
         popUp.classList.remove('pop-up__open');
