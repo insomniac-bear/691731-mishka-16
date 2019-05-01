@@ -10,19 +10,17 @@ var inputEmail = document.querySelector('[name=e-mail]');
 var inputPhoneNumber = document.querySelector('[name=phone-number]');
 var buttonForm = document.querySelector('.button--form');
 
-navMain.classList.remove('page-header__nav--nojs');
+navMain.classList.remove('page-header__nav--opened');
 if (popUp) {
   var popUpBox = popUp.querySelector('.pop-up__box');
   popUp.classList.remove('pop-up__nojs');
 }
 
 navToggle.addEventListener('click', function() {
-  if (navMain.classList.contains('page-header__nav--closed')) {
-    navMain.classList.remove('page-header__nav--closed');
-    navMain.classList.add('page-header__nav--opened');
-  } else {
-    navMain.classList.add('page-header__nav--closed');
+  if (navMain.classList.contains('page-header__nav--opened')) {
     navMain.classList.remove('page-header__nav--opened');
+  } else {
+    navMain.classList.add('page-header__nav--opened');
   }
 });
 
