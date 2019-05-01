@@ -78,6 +78,11 @@
       background-image: url("../img/review@1x.jpg");
       background-repeat: no-repeat;
       background-position: top left;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/review@2x.jpg");
+        background-size: contain;
+      }
     }
 
     &--contacts {
