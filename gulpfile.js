@@ -74,7 +74,7 @@ gulp.task("html", function() {
 });
 
 gulp.task("minhtml", function() {
-  return gulp.src("source/*.html")
+  return gulp.src("build/*.html")
   .pipe(htmlmin({
     collapseWhitespace: true
   }))
