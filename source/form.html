@@ -8,7 +8,7 @@
     <link href="css/style.min.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <div style="display:none">
+    <div class="sprite">
       <include src="build/img/sprite.svg"></include>
     </div>
 
@@ -20,6 +20,10 @@
           <img src="img/logo-mobile.svg" class="page-header__logo-image" width="86" height="35" alt="Логотип магазина">
         </picture>
       </a>
+      <!--Кнопка открытия меню
+          Классы для состояний меню:
+          page-header__nav - меню закрыто
+          page-header__nav--opened - меню открыто-->
       <button class="page-header__nav-toggle">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -81,11 +85,11 @@
           <div class="wrapper__inner wrapper__inner--form">
             <label class="ordering-form__label">
               <input type="radio" class="visually-hidden ordering-form__hidden-radio" name="type-of-ordering[]" value="Accssesory for interior" checked tabindex="-1">
-              <span class="ordering-form__radio-value" tabindex="7">Аксессуар для интерьеров</span>
+              <span class="ordering-form__radio-value" tabindex="0">Аксессуар для интерьеров</span>
             </label>
             <label class="ordering-form__label">
               <input type="radio" class="visually-hidden ordering-form__hidden-radio" name="type-of-ordering[]" value="Toy" tabindex="-1">
-              <span class="ordering-form__radio-value" tabindex="8">Детская игрушка</span>
+              <span class="ordering-form__radio-value" tabindex="0">Детская игрушка</span>
             </label>
           </div>
         </fieldset>
@@ -95,27 +99,27 @@
           <div class="wrapper__inner wrapper__inner--form wrapper__inner--ordering-gray">
             <label class="ordering-form__label ordering-form__label--large-margin">
               <input type="checkbox" class="visually-hidden ordering-form__checkbox" name="color[]" value="white" checked tabindex="-1">
-              <span class="ordering-form__checkbox-value" tabindex="9">Белый</span>
+              <span class="ordering-form__checkbox-value" tabindex="0">Белый</span>
             </label>
             <label class="ordering-form__label ordering-form__label--large-margin">
               <input type="checkbox" class="visually-hidden ordering-form__checkbox" name="color[]" value="gray" checked tabindex="-1">
-              <span class="ordering-form__checkbox-value" tabindex="10">Серый</span>
+              <span class="ordering-form__checkbox-value" tabindex="0">Серый</span>
             </label>
             <label class="ordering-form__label ordering-form__label--large-margin">
               <input type="checkbox" class="visually-hidden ordering-form__checkbox" name="color[]" value="tiffany" tabindex="-1">
-              <span class="ordering-form__checkbox-value" tabindex="11">"Тиффани"</span>
+              <span class="ordering-form__checkbox-value" tabindex="0">"Тиффани"</span>
             </label>
             <label class="ordering-form__label ordering-form__label--large-margin">
               <input type="checkbox" class="visually-hidden ordering-form__checkbox" name="color[]" value="black" tabindex="-1">
-              <span class="ordering-form__checkbox-value" tabindex="12">Черный</span>
+              <span class="ordering-form__checkbox-value" tabindex="0">Черный</span>
             </label>
             <label class="ordering-form__label ordering-form__label--large-margin">
               <input type="checkbox" class="visually-hidden ordering-form__checkbox" name="color[]" value="pink" tabindex="-1">
-              <span class="ordering-form__checkbox-value" tabindex="13">Розовый</span>
+              <span class="ordering-form__checkbox-value" tabindex="0">Розовый</span>
             </label>
             <label class="ordering-form__label ordering-form__label--large-margin">
               <input type="checkbox" class="visually-hidden ordering-form__checkbox" name="color[]" value="orandge" tabindex="-1">
-              <span class="ordering-form__checkbox-value" tabindex="14">Оранжевый</span>
+              <span class="ordering-form__checkbox-value" tabindex="0">Оранжевый</span>
             </label>
           </div>
         </fieldset>

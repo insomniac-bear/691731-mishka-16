@@ -8,7 +8,7 @@
     <link href="css/style.min.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <div style="display:none">
+    <div class="sprite">
       <include src="build/img/sprite.svg"></include>
     </div>
 
@@ -20,6 +20,10 @@
           <img src="img/logo-mobile.svg" class="page-header__logo-image" width="86" height="35" alt="Логотип магазина">
         </picture>
       </a>
+      <!--Кнопка открытия меню
+          Классы для состояний меню:
+          page-header__nav - меню закрыто
+          page-header__nav--opened - меню открыто-->
       <button class="page-header__nav-toggle">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -188,7 +192,7 @@
             <source type="image/webp" media="(min-width: 320px)" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
 
             <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1чб img/video-tablet@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
             <img src="img/video-mobile@1x.jpg"  srcset="img/video-mobile@2x.jpg 2x" class="about-production__video-img" alt="видео о том как производятся товары">
           </picture>
           <svg class="about-production__video-icon" width="101" height="77">

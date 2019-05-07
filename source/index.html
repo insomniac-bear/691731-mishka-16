@@ -8,7 +8,7 @@
     <link href="css/style.min.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <div style="display:none">
+    <div class="sprite">
       <include src="build/img/sprite.svg"></include>
     </div>
 
@@ -20,6 +20,10 @@
           <img src="img/logo-mobile.svg" class="page-header__logo-image" width="86" height="35" alt="Логотип магазина">
         </picture>
       </a>
+      <!--Кнопка открытия меню
+          Классы для состояний меню:
+          page-header__nav - меню закрыто
+          page-header__nav--opened - меню открыто-->
       <button class="page-header__nav-toggle">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -70,7 +74,7 @@
     <main class="page-main">
       <h1 class="visually-hidden">Магазин вязанных вещей ручной работы</h1>
       <div class="page-main__wrapper">
-        <h2 class="site-title site-title--page-main">Милые штучки ручной <br class="page-main--mobile-only"> работы для дома</h2>
+        <h2 class="site-title site-title--page-main"><span class="site-title--line-break">Милые штучки ручной</span> работы для дома</h2>
       </div>
 
       <nav class="catalog-navigation">
@@ -140,7 +144,8 @@
                     <use xlink:href="#icon-feature-flower"></use>
                   </svg>
                 </span>
-                <p class="about-us__paragraph">Экологически<br> чистые материалы</p>
+                <span class="about-us__line-break">Экологически</span>
+                <span class="about-us__line-break">чистые материалы</span>
               </li>
               <li class="about-us__item">
                 <span class="about-us__icon">
@@ -148,7 +153,8 @@
                     <use xlink:href="#icon-feature-money"></use>
                   </svg>
                 </span>
-                <p class="about-us__paragraph">Скандинавский стиль<br> по российской цене</p>
+                <span class="about-us__line-break">Скандинавский стиль</span>
+                <span class="about-us__line-break">по российской цене</span>
               </li>
               <li class="about-us__item">
                 <span class="about-us__icon">
@@ -156,7 +162,8 @@
                     <use xlink:href="#icon-feature-heart"></use>
                   </svg>
                 </span>
-                <p class="about-us__paragraph">Увеличивает лайки<br> на фотографиях</p>
+                <span class="about-us__line-break">Увеличивает лайки</span>
+                <span class="about-us__line-break">на фотографиях</span>
               </li>
             </ul>
             <ul class="site-list about-us__list">
@@ -166,7 +173,8 @@
                     <use xlink:href="#icon-feature-ball"></use>
                   </svg>
                 </span>
-                <p class="about-us__paragraph">Связано в ручную с<br> любовью и умилением</p>
+                <span class="about-us__line-break">Связано в ручную с</span>
+                <span class="about-us__line-break">любовью и умилением</span>
               </li>
               <li class="about-us__item">
                 <span class="about-us__icon">
@@ -174,7 +182,8 @@
                     <use xlink:href="#icon-feature-rocket"></use>
                   </svg>
                 </span>
-                <p class="about-us__paragraph">Поддержка отечественного<br> производителя</p>
+                <span class="about-us__line-break">Поддержка отечественного</span>
+                <span class="about-us__line-break">производителя</span>
               </li>
               <li class="about-us__item">
                 <span class="about-us__icon">
@@ -182,7 +191,8 @@
                     <use xlink:href="#icon-feature-gift"></use>
                   </svg>
                 </span>
-                <p class="about-us__paragraph">Поставляется в<br> подарочной упаковке</p>
+                <span class="about-us__line-break">Поставляется в</span>
+                <span class="about-us__line-break">подарочной упаковке</span>
               </li>
             </ul>
           </div>
