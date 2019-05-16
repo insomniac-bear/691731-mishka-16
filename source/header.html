@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка, каталог товаров</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link href="css/style.min.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="sprite">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
+    <header class="header">
+      <nav class="header__nav header__nav--opened">
+        <ul class="site-list header__nav-list header__nav-list--opened">
+          <li class="header__nav-item header__nav-logo">
+            <a href="index.html" class="header__logo">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img src="img/logo-mobile.svg" class="header__logo-image" width="86" height="35" alt="Логотип магазина">
+              </picture>
+            </a>
+            <!--Кнопка открытия меню
+                Классы для состояний меню:
+                page-header__nav - меню закрыто
+                page-header__nav--opened - меню открыто-->
+            <button class="header__nav-toggle">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+          </li>
+
+          <li class="header__nav-item header__nav-toggled header__nav-toggled--first">
+            <a href="catalog.html" class="header__nav-link">Каталог товаров</a>
+          </li>
+          <li class="header__nav-item header__nav-toggled">
+            <a href="form.html" class="header__nav-link">Вязание на заказ</a>
+          </li>
+          <li class="header__nav-item header__nav-usr">
+            <a href="#" class="header__nav-link">
+              <svg class="header__nav-icon" width="18" height="19">
+                <use xlink:href="#icon-search"></use>
+              </svg>
+              <span class="header__nav-hidden">Поиск по сайту</span>
+            </a>
+          </li>
+          <li class="header__nav-item header__nav-usr header__nav-usr--full">
+            <a href="#" class="header__nav-link">
+              <svg class="header__nav-icon"  width="20.294" height="18.849">
+                <use xlink:href="#icon-cart"></use>
+              </svg>
+              Корзина: <span>пока пуста</span>
+            </a>
+          </li>
+          <li class="header__nav-item header__nav-desktop-item header__nav-desktop-item--first">
+            <a href="#" class="header__nav-link">Новые поступления</a>
+          </li>
+          <li class="header__nav-item header__nav-desktop-item">
+            <a href="form.html" class="header__nav-link">Распродажа</a>
+          </li>
+          <li class="header__nav-link header__nav-note">
+            Бесплатная доставка по России
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-catalog">
+      <div class="page-catalog__wrapper">
+        <h1 class="site-title">Каталог товаров</h1>
+      </div>
+    </main>
+    <script src="js/script.min.js"></script>
+  </body>
+</html>

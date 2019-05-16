@@ -52,8 +52,7 @@
 
 
 .catalog-navigation__item:hover .catalog-navigation__link-text {
-  margin-top: 25px;
-  margin-bottom: 35px;
+  transform: translateY(-5px);
 }
 
 .catalog-navigation__link {
@@ -101,7 +100,7 @@
 }
 
 .catalog-navigation__link-text {
-  margin: 30px 0;
+  margin: 28px 0;
   padding: 0;
 
   width: 50%;
@@ -170,11 +169,6 @@
     }
   }
 
-  .catalog-navigation__item:hover .catalog-navigation__link-text {
-    margin-top: 28px;
-    margin-bottom: 27px;
-  }
-
   .catalog-navigation__link {
     width: 82%;
   }
@@ -189,6 +183,7 @@
 
 @media (min-width: @desktop-width) {
   .catalog-navigation {
+    margin-top: -117px;
     width: 91.4%;
   }
 
@@ -199,16 +194,22 @@
   }
 
   .catalog-navigation__link {
-    margin: 0 7%;
+    margin: 0;
+    margin-left: 7%;
+    margin-right: 5%;
 
-    width: 86%;
-  }
+    width: 88%;
 
-  .catalog-navigation__item:hover .catalog-navigation__link-text {
-    margin-bottom: 21px;
+    &::after {
+      margin-top: 25px;
+    }
   }
 
   .catalog-navigation__link-text {
-    margin-bottom: 16px;
+    margin-top: 27px;
+    margin-bottom: 15px;
+
+    font-size: 20px;
+    line-height: 30px;
   }
 }

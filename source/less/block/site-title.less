@@ -8,16 +8,17 @@
   font-weight: bold;
   line-height: 30px;
   text-align: center;
+  letter-spacing: 0;
 
   &--page-main {
     padding-bottom: 120px;
   }
+}
 
-  &--line-break {
-    display: block;
-    margin: 0;
-    padding: 0;
-  }
+.site-title__line-break {
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -30,6 +31,12 @@
 
     &--page-main {
       padding-top: 157px;
+      padding-bottom: 475px;
+    }
+
+    &--form {
+      padding-top: 92px;
+      padding-bottom: 69px;
     }
   }
 }
@@ -44,7 +51,8 @@
 
     &--page-main {
       margin: 0;
-      padding-top: 157px;
+      padding-top: 154px;
+      padding-bottom: 460px;
       padding-right: 225px;
       padding-left: 225px;
     }

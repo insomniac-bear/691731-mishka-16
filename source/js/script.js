@@ -1,5 +1,6 @@
-var navMain = document.querySelector('.page-header');
-var navToggle = document.querySelector('.page-header__nav-toggle');
+var navMain = document.querySelector('.header__nav');
+var navList = navMain.querySelector('.header__nav-list');
+var navToggle = document.querySelector('.header__nav-toggle');
 var popUp = document.querySelector('.pop-up');
 var btnOrder = document.querySelector('.button__order');
 
@@ -10,17 +11,21 @@ var inputEmail = document.querySelector('[name=e-mail]');
 var inputPhoneNumber = document.querySelector('[name=phone-number]');
 var buttonForm = document.querySelector('.button--form');
 
-navMain.classList.remove('page-header__nav--opened');
+navMain.classList.remove('header__nav--opened');
+navList.classList.remove('header__nav-list--opened');
+
 if (popUp) {
   var popUpBox = popUp.querySelector('.pop-up__box');
   popUp.classList.remove('pop-up__nojs');
 }
 
 navToggle.addEventListener('click', function() {
-  if (navMain.classList.contains('page-header__nav--opened')) {
-    navMain.classList.remove('page-header__nav--opened');
+  if (navMain.classList.contains('header__nav--opened')) {
+    navMain.classList.remove('header__nav--opened');
+    navList.classList.remove('header__nav-list--opened');
   } else {
-    navMain.classList.add('page-header__nav--opened');
+    navMain.classList.add('header__nav--opened');
+    navList.classList.add('header__nav-list--opened');
   }
 });
 

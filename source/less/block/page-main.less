@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
 
-  max-width: 1150px;
   font-size: 15px;
 }
 
@@ -10,16 +9,16 @@
   margin: 0;
   padding: 0;
 
-  max-width: 1150px;
-
-  background-color: #f1f1f1;
+  background-color: #f9f9f9;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: 180%;
+  background-position-x: center;
+  background-position-y: -20px;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/hero-mobile@2x.jpg");
+    background-size: 180%;
   }
 }
 
@@ -37,11 +36,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 695px;
+    margin-top: -46px;
     background-image: url("../img/hero-tablet@1x.jpg");
+    background-size: 150%;
+    background-position-y: bottom;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/hero-tablet@2x.jpg");
+      background-size: 150%;
     }
 
     &::after {
@@ -49,7 +51,7 @@
       display: block;
 
       width: 100%;
-      height: 10px;
+      height: 12px;
 
       background-color: #f8f8f8;
       background-image: url("../img/bg-zigzag-fill.svg");
@@ -61,15 +63,21 @@
 
 @media (min-width: @desktop-width) {
   .page-main {
-    margin: 0 auto;
+    margin: 0;
   }
 
   .page-main__wrapper {
+    margin-top: -44px;
+
     background-image: url("../img/hero-desktop@1x.jpg");
+    background-size: 100%;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/hero-desktop@2x.jpg");
+      background-size: 100%;
     }
+
+    border-top: 1px solid #ececec;
 
     &::after {
       height: 15px;

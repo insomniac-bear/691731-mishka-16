@@ -2,8 +2,6 @@
   margin: 0;
   padding: 0;
 
-  max-width: 1150px;
-
   background-color: #f1f1f1;
 }
 
@@ -11,12 +9,12 @@
   display: none;
 }
 
-.page-footer__list {
+.page-footer__social {
   display: flex;
   justify-content: center;
 
   padding-top: 25px;
-  padding-bottom: 27px;
+  padding-bottom: 22px;
 
   width: 100%;
 
@@ -46,36 +44,41 @@
   }
 }
 
-.page-footer__creator-container {
+.page-footer__creator {
   display: flex;
-  justify-content: space-between;
-
   margin: 0 auto;
   padding: 0;
 
-  width: 71%;
+  width: 182px;
 }
 
 .page-footer__creator-text {
-  align-self: center;
+  display: inline-block;
 
   margin: 0;
+  margin-top: 27px;
+  margin-right: 28px;
   padding: 0;
 
   font-size: 19px;
   font-weight: bold;
   line-height: 18px;
+
+  width: 125px;
 }
 
 .page-footer__creator-author {
+  display: inline-block;
   margin: 0;
-  padding: 24px 0;
+  margin-top: 22px;
+  margin-bottom: 23px;
+  padding: 0;
 }
 
 .page-footer__creator-icon {
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 27px;
+  height: 34px;
 
   fill: #63d1bb;
 
@@ -109,30 +112,33 @@
     width: 27%;
   }
 
-  .page-footer__list {
+  .page-footer__social {
     padding-top: 57px;
     padding-bottom: 58px;
 
-    width: 21%;
-
+    width: 35%;
     border: none;
   }
 
-  .page-footer__creator-container {
+  .page-footer__creator {
     margin: 0;
     padding: 0;
 
-    width: 27%;
+    width: 182px;
+  }
+
+  .page-footer__creator-text {
+    margin-top: 61px;
   }
 
   .page-footer__creator-author {
-    padding-top: 58px;
+    padding-top: 33px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-footer {
-    margin: 0 auto;
+    margin: 0;
 
     width: 100%;
   }
@@ -141,16 +147,17 @@
     width: auto;
   }
 
-  .page-footer__creator-container {
+  .page-footer__social {
+    padding-left: 80px;
+    width: 260px;
+  }
+
+  .page-footer__creator {
     width: 182px;
   }
 
-  .page-footer__creator-text {
-    align-self: auto;
-    padding-top: 63px;
-  }
-
   .page-footer__creator-author {
-    padding-top: 54px;
+    margin: 57px 0;
+    padding: 0;
   }
 }

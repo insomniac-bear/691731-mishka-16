@@ -6,7 +6,7 @@
 
 .catalog__item {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   padding: 0;
 }
 
@@ -19,10 +19,23 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .catalog {
+    margin: 0 6.5%;
+    margin-top: 80px;
+  }
+
+  .catalog__item {
+    margin-bottom: 55px;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .catalog {
-    margin: 0 4.3%;
-    margin-top: 131px;
+    margin: 0 auto;
+    margin-top: 132px;
+
+    width: 1050px;
   }
 
   .catalog__list {

@@ -12,63 +12,59 @@
       <include src="build/img/sprite.svg"></include>
     </div>
 
-    <header class="page-header page-header__nav page-header__nav--opened">
-      <a href="index.html" class="page-header__logo page-header__logo--link">
-        <picture>
-          <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img src="img/logo-mobile.svg" class="page-header__logo-image" width="86" height="35" alt="Логотип магазина">
-        </picture>
-      </a>
-      <!--Кнопка открытия меню
-          Классы для состояний меню:
-          page-header__nav - меню закрыто
-          page-header__nav--opened - меню открыто-->
-      <button class="page-header__nav-toggle">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <nav class="site-nav site-nav--tablet-down">
-        <ul class="site-list site-nav__list">
-          <li class="site-nav__item site-nav__item--border-right">
-            <a href="catalog.html" class="site-nav__link site-nav__link--font-s">Каталог товаров</a>
+    <header class="header">
+      <nav class="header__nav header__nav--opened">
+        <ul class="site-list header__nav-list header__nav-list--opened">
+          <li class="header__nav-item header__nav-logo">
+            <a href="index.html" class="header__logo">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img src="img/logo-mobile.svg" class="header__logo-image" width="86" height="35" alt="Логотип магазина">
+              </picture>
+            </a>
+            <!--Кнопка открытия меню
+                Классы для состояний меню:
+                page-header__nav - меню закрыто
+                page-header__nav--opened - меню открыто-->
+            <button class="header__nav-toggle">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
           </li>
-          <li class="site-nav__item">
-            <a href="form.html" class="site-nav__link site-nav__link--font-s">Вязание на заказ</a>
+
+          <li class="header__nav-item header__nav-toggled header__nav-toggled--first">
+            <a href="catalog.html" class="header__nav-link">Каталог товаров</a>
           </li>
-        </ul>
-      </nav>
-      <nav class="site-nav site-nav--user-nav">
-        <ul class="site-list site-nav__list site-nav__list--user-nav">
-          <li class="site-nav__item site-nav__item--search">
-            <a href="#" class="site-nav__link site-nav__link--padding-s">
-              <svg class="site-nav__icon" width="18px" height="19px">
+          <li class="header__nav-item header__nav-toggled">
+            <a href="form.html" class="header__nav-link">Вязание на заказ</a>
+          </li>
+          <li class="header__nav-item header__nav-usr">
+            <a href="#" class="header__nav-link">
+              <svg class="header__nav-icon" width="18" height="19">
                 <use xlink:href="#icon-search"></use>
               </svg>
-              <span class="site-nav--hidden">Поиск по сайту</span>
+              <span class="header__nav-hidden">Поиск по сайту</span>
             </a>
           </li>
-          <li class="site-nav__item">
-            <a href="#" class="site-nav__link site-nav__link--padding-s">
-              <svg class="site-nav__icon"  width="20.294px" height="18.849px">
+          <li class="header__nav-item header__nav-usr header__nav-usr--full">
+            <a href="#" class="header__nav-link">
+              <svg class="header__nav-icon"  width="20.294" height="18.849">
                 <use xlink:href="#icon-cart"></use>
               </svg>
-              Корзина:&nbsp;
-              <span>пока пуста</span>
+              Корзина: <span>пока пуста</span>
             </a>
           </li>
+          <li class="header__nav-item header__nav-desktop-item header__nav-desktop-item--first">
+            <a href="#" class="header__nav-link">Новые поступления</a>
+          </li>
+          <li class="header__nav-item header__nav-desktop-item">
+            <a href="form.html" class="header__nav-link">Распродажа</a>
+          </li>
+          <li class="header__nav-link header__nav-note">
+            Бесплатная доставка по России
+          </li>
         </ul>
       </nav>
-      <nav class="site-nav site-nav--desktop-down">
-        <ul class="site-list site-nav__list">
-          <li class="site-nav__item site-nav__item--desktop-inner-padding">
-            <a href="#" class="site-nav__link site-nav__link--font-desktop">Новые поступления</a>
-          </li>
-          <li class="site-nav__item">
-            <a href="form.html" class="site-nav__link site-nav__link--font-desktop">Распродажа</a>
-          </li>
-        </ul>
-      </nav>
-      <p class="page-header__nav-txt">Бесплатная доставка по России</p>
     </header>
 
     <main class="page-catalog">
@@ -94,14 +90,14 @@
 
                 <figcaption class="card-product__description">
 
-                  <div class="wrapper__inner--product-description">
+                  <div class="card-product__inner">
                     <h3 class="card-product__title">Зайчик-попрыгайчик</h3>
                     <p class="card-product__attribute">Рост 30 см, вес 200 г</p>
                   </div>
 
-                  <div class="wrapper__inner--product-price">
+                  <div class="card-product__inner card-product__inner--price">
                     <p class="card-product__price">1 200 руб.</p>
-                    <span class="card-product__cart-icon button__order">
+                    <span class="card-product__cart button__order">
                       <svg class="card-product__cart-svg" width="20.294px" height="18.849px">
                         <use xlink:href="#icon-cart"></use>
                       </svg>
@@ -117,8 +113,8 @@
               <figure class="card-product">
                 <picture>
                   <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.webp 1x, img/photo-bowl-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 765px)" srcset="img/photo-bowl-tablet1x.webp 1x, img/photo-bowl-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 320px)" srcset="img/photo-bowl-mobile@1x 1x, img/photo-bowl-mobile@2x 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.webp 1x, img/photo-bowl-tablet@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 320px)" srcset="img/photo-bowl-mobile@1x.webp 1x, img/photo-bowl-mobile@2x.webp 2x">
 
                   <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
@@ -127,14 +123,14 @@
 
                 <figcaption class="card-product__description">
 
-                  <div class="wrapper__inner--product-description">
+                  <div class="card-product__inner">
                     <h3 class="card-product__title">Корзинка для белья</h3>
                     <p class="card-product__attribute">Диаметр 15 см, высота 10 см</p>
                   </div>
 
-                  <div class="wrapper__inner--product-price">
+                  <div class="card-product__inner card-product__inner--price">
                     <p class="card-product__price">690 руб.</p>
-                    <span class="card-product__cart-icon button__order">
+                    <span class="card-product__cart button__order">
                       <svg class="card-product__cart-svg" width="20.294px" height="18.849px">
                         <use xlink:href="#icon-cart"></use>
                       </svg>
@@ -161,14 +157,14 @@
 
                 <figcaption class="card-product__description">
 
-                  <div class="wrapper__inner--product-description">
+                  <div class="card-product__inner">
                     <h3 class="card-product__title">Большая корзинка для игрушек</h3>
                     <p class="card-product__attribute">Диаметр 30 см, высота 30 см</p>
                   </div>
 
-                  <div class="wrapper__inner--product-price">
+                  <div class="card-product__inner card-product__inner--price">
                     <p class="card-product__price">1 500 руб.</p>
-                    <span class="card-product__cart-icon button__order">
+                    <span class="card-product__cart button__order">
                       <svg class="card-product__cart-svg" width="20.294px" height="18.849px">
                         <use xlink:href="#icon-cart"></use>
                       </svg>
@@ -182,8 +178,7 @@
       </section>
       <section class="about-production">
         <header class="about-production__header">
-          <span class="about-production__icon"></span>
-          <h3 class="page-catalog__title">Процесс<br class="page-main--mobile-only"> производства</h3>
+          <h3 class="page-catalog__title">Процесс производства</h3>
         </header>
         <a class="about-production__video" href="#">
           <picture>
@@ -200,7 +195,7 @@
           </svg>
         </a>
         <div class="wrapper__inner wrapper__inner--about-production">
-          <p class="about-production__description">По просьбам наших любимых фоловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <p class="about-production__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
           <button class="button button--catalog button__order">Сделать заказ</button>
         </div>
       </section>
@@ -208,15 +203,15 @@
 
     <footer class="page-footer">
       <div class="wrapper wrapper--footer">
-        <a href="index.html" class="page-footer__logo">
-          <svg class="page-footer__logo-img" width="101.615px" height="34.056px">
+        <a class="page-footer__logo">
+          <svg width="101.615" height="34.056">
             <use xlink:href="#icon-logo-footer"></use>
           </svg>
         </a>
-        <ul class="site-list page-footer__list">
+        <ul class="site-list page-footer__social">
           <li class="page-footer__social-item">
             <a href="#" class="page-footer__social-link">
-              <svg width="21.769px" height="21.334px">
+              <svg width="21.769" height="21.334">
                 <use xlink:href="#icon-insta"></use>
               </svg>
               <span class="visually-hidden">Instagram</span>
@@ -224,7 +219,7 @@
           </li>
           <li class="page-footer__social-item">
             <a href="#" class="page-footer__social-link">
-              <svg width="14.962px" height="27.718px">
+              <svg width="14.962" height="27.718">
                 <use xlink:href="#icon-fb"></use>
               </svg>
               <span class="visually-hidden">Fcebook</span>
@@ -232,14 +227,14 @@
           </li>
           <li class="page-footer__social-item">
             <a href="#" class="page-footer__social-link">
-              <svg width="23.494px" height="20.168px">
+              <svg width="23.494" height="20.168">
                 <use xlink:href="#icon-twitter"></use>
               </svg>
               <span class="visually-hidden">Twitter</span>
             </a>
           </li>
         </ul>
-        <dl class="page-footer__creator-container">
+        <dl class="page-footer__creator">
           <dt class="page-footer__creator-text">Разработано</dt>
           <dd class="page-footer__creator-author">
             <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__creator-link">
@@ -254,7 +249,7 @@
 
     <div class="pop-up pop-up__nojs">
       <div class="pop-up__box">
-        <h2 class="pop-up__title">Добавть в&nbsp;корзину</h2>
+        <h2 class="pop-up__title">Добавить в&nbsp;корзину</h2>
         <p class="pop-up__note">Выберите размер:</p>
         <form action="https://echo.htmlacademy.ru" class="pop-up__form" method="get">
           <ul class="site-list pop-up__list">
